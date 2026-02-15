@@ -8,7 +8,7 @@ function Support() {
         <h1 className="page-title">SUPPORT</h1>
         <div className="page-body">
           <p>Thank you for using services by OUR ENGINEERING.</p>
-          <p>Founded and operated by Kosuke Osada and Senri Gotoda, we are dedicated to providing a unique and seamless experience for our users.</p>
+          <p>Founded in Japan and operated by Kosuke Osada and Senri Gotoda, we are dedicated to providing a unique and seamless experience for our users.</p>
 
           <h3>Contact Information</h3>
           <p><strong>Email:</strong> contact@ourengineeringstudio.com</p>
