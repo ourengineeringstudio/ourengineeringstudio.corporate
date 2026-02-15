@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/ourengineeringstudio.corporate/static/css/main.527505b7.css",
+    "main.js": "/ourengineeringstudio.corporate/static/js/main.bea3ee21.js",
+    "static/js/453.a5193524.chunk.js": "/ourengineeringstudio.corporate/static/js/453.a5193524.chunk.js",
+    "static/media/dailyshingon.png": "/ourengineeringstudio.corporate/static/media/dailyshingon.36fa39c6aa3ab60b3ecd.png",
+    "static/media/coffeehouse.png": "/ourengineeringstudio.corporate/static/media/coffeehouse.0bc4c5d5ca5d827f7f1f.png",
+    "index.html": "/ourengineeringstudio.corporate/index.html",
+    "main.527505b7.css.map": "/ourengineeringstudio.corporate/static/css/main.527505b7.css.map",
+    "main.bea3ee21.js.map": "/ourengineeringstudio.corporate/static/js/main.bea3ee21.js.map",
+    "453.a5193524.chunk.js.map": "/ourengineeringstudio.corporate/static/js/453.a5193524.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.527505b7.css",
+    "static/js/main.bea3ee21.js"
+  ]
+}
