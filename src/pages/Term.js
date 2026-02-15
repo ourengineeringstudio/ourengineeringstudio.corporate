@@ -21,6 +21,9 @@ function Term() {
 
           <h3>5. Limitation of Liability</h3>
           <p>To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, or consequential damages, or any loss of data or profits resulting from your use of or inability to use the Services.</p>
+
+          <h3>6. Governing Law and Jurisdiction</h3>
+          <p>These terms are governed by the laws of Japan. Any disputes shall be subject to the exclusive jurisdiction of the courts of Japan.</p>
         </div>
       </main>
 
