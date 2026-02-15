@@ -20,7 +20,9 @@ function Home() {
               let storeUrl = null;
 
               // platform指定がある場合はそれに従う
-              if (app.platform === 'ios' && app.appStoreUrl) {
+              if (app.platform === 'web' && app.webUrl) {
+                storeUrl = app.webUrl;
+              } else if (app.platform === 'ios' && app.appStoreUrl) {
                 storeUrl = app.appStoreUrl;
               } else if (app.platform === 'android' && app.playStoreUrl) {
                 storeUrl = app.playStoreUrl;
@@ -28,8 +30,8 @@ function Home() {
                 // bothの場合はApp Storeを優先（変更可能）
                 storeUrl = app.appStoreUrl || app.playStoreUrl;
               } else {
-                // platform指定がない場合は、存在する方を使用（App Store優先）
-                storeUrl = app.appStoreUrl || app.playStoreUrl;
+                // platform指定がない場合は、存在する方を使用（優先順位: Web > App Store > Google Play）
+                storeUrl = app.webUrl || app.appStoreUrl || app.playStoreUrl;
               }
 
               return (

@@ -4,11 +4,21 @@
 const apps = [
   {
     id: 'coffeehouse',
-    name: 'Coffee House',
+    name: 'Coffeehouse',
     icon: 'coffeehouse.png',
-    platform: 'ios', // 'ios', 'android', 'both' のいずれか（両方ある場合はこの値で優先するストアを決定）
+    platform: 'ios', // 'ios', 'android', 'both', 'web' のいずれか（両方ある場合はこの値で優先するストアを決定）
     appStoreUrl: 'https://apps.apple.com/jp/app/coffeehouse',
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.ourengineering.coffeehouse',
+    webUrl: '', // Webアプリ/サービスのURL
+  },
+  {
+    id: 'dailyshingon',
+    name: 'Daily Shingon',
+    icon: 'dailyshingon.png',
+    platform: 'web', // 'ios', 'android', 'both', 'web' のいずれか（両方ある場合はこの値で優先するストアを決定）
+    appStoreUrl: '',
+    playStoreUrl: '',
+    webUrl: 'https://nomuman.github.io/daily-shingon/', // Webアプリ/サービスのURL
   },
 ];
 
