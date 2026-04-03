@@ -2,19 +2,12 @@ import '../App.css';
 import { Link } from 'react-router-dom';
 
 function PrivacyPolicy() {
-  // ビルド時の日付を環境変数から取得、または現在の日付をフォールバック
-  const buildDate = process.env.REACT_APP_BUILD_DATE || new Date().toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-
   return (
     <div className="App">
       <main className="page-content">
         <h1 className="page-title">PRIVACY POLICY</h1>
         <div className="page-body">
-          <p><em>Last updated: {buildDate}</em></p>
+          <p><em>Last updated: 2026/3/9</em></p>
           <p>OUR ENGINEERING ("we", "our", or "us") operates mobile applications and web services. This policy informs you of our practices regarding the collection, use, and disclosure of personal data.</p>
 
           <h3>1. Information Collection and Use</h3>
