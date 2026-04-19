@@ -12,6 +12,15 @@ const apps = [
     webUrl: '', // Webアプリ/サービスのURL
   },
   {
+    id: 'daymarkphoto',
+    name: 'Daymark Photo',
+    icon: 'daymark_photo.png',
+    platform: 'ios',
+    appStoreUrl: '',
+    playStoreUrl: '',
+    webUrl: '',
+  },
+  {
     id: 'dailyshingon',
     name: 'Daily Shingon',
     icon: 'dailyshingon.png',
