@@ -19,7 +19,10 @@ const apps = [
     name: 'Daymark Photo',
     icon: 'daymark_photo.png',
     platform: 'ios',
-    appStoreUrl: '',
+    appStoreUrl: {
+      ja: 'https://apps.apple.com/jp/app/daymark-photos/id6761719165',
+      en: 'https://apps.apple.com/us/app/daymark-photos/id6761719165',
+    },
     playStoreUrl: '',
     webUrl: '',
   },
