@@ -87,8 +87,10 @@
 .footer-nav {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1.5rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  min-height: 1.5rem;
 }
 
 .footer-link {
@@ -96,6 +98,7 @@
   text-decoration: none;
   font-size: 0.65rem;
   letter-spacing: 0.08em;
+  line-height: 1;
   transition: opacity 0.3s ease;
 }
 
@@ -158,4 +161,67 @@
 .page-body em {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.85rem;
+}
+
+/* Header & Language Switcher */
+.site-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.75rem 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.language-switcher {
+  position: relative;
+}
+
+.language-switcher-button {
+  background: none;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  color: #ffffff;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.language-switcher-button:hover {
+  border-color: rgba(128, 128, 128, 0.6);
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  background: #1a1a1a;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  min-width: 100px;
+}
+
+.language-option {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s ease;
+}
+
+.language-option:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.language-option.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
 }

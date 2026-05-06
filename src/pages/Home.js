@@ -1,37 +1,41 @@
 import '../App.css';
 import apps from '../data/apps';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../i18n/LanguageContext';
+import Header from '../components/Header';
 
 function Home() {
+  const { t, language } = useLanguage();
+
   return (
     <div className="App">
+      <Header />
       <main className="main-content">
-        <h1 className="company-name">OUR ENGINEERING</h1>
+        <h1 className="company-name">{t('home.companyName')}</h1>
       </main>
 
       {apps.length > 0 && (
         <div className="app-icons-section">
           <div className="app-icons-container">
             {apps.map((app) => {
-              // 画像のインポートパスを動的に生成
               const iconPath = require(`../assets/images/appIcons/${app.icon}`);
 
-              // リンク先を決定するロジック
+              // URLが言語別オブジェクトの場合は現在の言語で解決、文字列ならそのまま使用
+              const resolve = (url) =>
+                typeof url === 'object' && url !== null ? (url[language] || url.en || '') : (url || '');
+
               let storeUrl = null;
 
-              // platform指定がある場合はそれに従う
               if (app.platform === 'web' && app.webUrl) {
-                storeUrl = app.webUrl;
+                storeUrl = resolve(app.webUrl);
               } else if (app.platform === 'ios' && app.appStoreUrl) {
-                storeUrl = app.appStoreUrl;
+                storeUrl = resolve(app.appStoreUrl);
               } else if (app.platform === 'android' && app.playStoreUrl) {
-                storeUrl = app.playStoreUrl;
+                storeUrl = resolve(app.playStoreUrl);
               } else if (app.platform === 'both') {
-                // bothの場合はApp Storeを優先（変更可能）
-                storeUrl = app.appStoreUrl || app.playStoreUrl;
+                storeUrl = resolve(app.appStoreUrl) || resolve(app.playStoreUrl);
               } else {
-                // platform指定がない場合は、存在する方を使用（優先順位: Web > App Store > Google Play）
-                storeUrl = app.webUrl || app.appStoreUrl || app.playStoreUrl;
+                storeUrl = resolve(app.webUrl) || resolve(app.appStoreUrl) || resolve(app.playStoreUrl);
               }
 
               return (
@@ -56,9 +60,9 @@ function Home() {
 
       <footer className="footer">
         <nav className="footer-nav">
-          <Link to="/support" className="footer-link">SUPPORT</Link>
-          <Link to="/privacy" className="footer-link">PRIVACY POLICY</Link>
-          <Link to="/term" className="footer-link">TERM</Link>
+          <Link to="/support" className="footer-link">{t('home.support')}</Link>
+          <Link to="/privacy" className="footer-link">{t('home.privacy')}</Link>
+          <Link to="/term" className="footer-link">{t('home.term')}</Link>
         </nav>
       </footer>
     </div>

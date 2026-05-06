@@ -1,33 +1,38 @@
 import '../App.css';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../i18n/LanguageContext';
+import Header from '../components/Header';
 
 function Support() {
+  const { t } = useLanguage();
+
   return (
     <div className="App">
+      <Header />
       <main className="page-content">
-        <h1 className="page-title">SUPPORT</h1>
+        <h1 className="page-title">{t('support.title')}</h1>
         <div className="page-body">
-          <p>Thank you for using services by OUR ENGINEERING.</p>
-          <p>Founded in Japan and operated by Kosuke Osada and Senri Gotoda, we are dedicated to providing a unique and seamless experience for our users.</p>
+          <p>{t('support.intro')}</p>
+          <p>{t('support.description')}</p>
 
-          <h3>Contact Information</h3>
-          <p><strong>Email:</strong> contact@ourengineeringstudio.com</p>
-          <p><strong>Response Time:</strong> We typically respond within 24-48 hours during business days (Mon-Fri).</p>
-          <p><strong>Urgent Matters:</strong> Please mark your subject line with [URGENT].</p>
+          <h3>{t('support.contactTitle')}</h3>
+          <p><strong>{t('support.emailLabel')}</strong> {t('support.email')}</p>
+          <p><strong>{t('support.responseTimeLabel')}</strong> {t('support.responseTime')}</p>
+          <p><strong>{t('support.urgentLabel')}</strong> {t('support.urgent')}</p>
 
-          <h3>Technical Support</h3>
-          <p>To help us resolve your issue quickly, please include:</p>
+          <h3>{t('support.techTitle')}</h3>
+          <p>{t('support.techIntro')}</p>
           <ul>
-            <li>Device and OS version</li>
-            <li>Description of the issue and steps to reproduce</li>
-            <li>Screenshots (if relevant)</li>
+            <li>{t('support.techDevice')}</li>
+            <li>{t('support.techDescription')}</li>
+            <li>{t('support.techScreenshots')}</li>
           </ul>
         </div>
       </main>
 
       <footer className="footer">
         <nav className="footer-nav">
-          <Link to="/" className="footer-link">HOME</Link>
+          <Link to="/" className="footer-link">{t('common.home')}</Link>
         </nav>
       </footer>
     </div>

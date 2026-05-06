@@ -7,7 +7,10 @@ const apps = [
     name: 'Coffeehouse',
     icon: 'coffeehouse.png',
     platform: 'ios', // 'ios', 'android', 'both', 'web' のいずれか（両方ある場合はこの値で優先するストアを決定）
-    appStoreUrl: 'https://apps.apple.com/jp/app/coffeehouse',
+    appStoreUrl: {
+      ja: 'https://apps.apple.com/jp/app/coffeehouse/id6755665211',
+      en: 'https://apps.apple.com/app/coffeehouse/id6755665211',
+    },
     playStoreUrl: 'https://play.google.com/store/apps/details?id=com.ourengineering.coffeehouse',
     webUrl: '', // Webアプリ/サービスのURL
   },
