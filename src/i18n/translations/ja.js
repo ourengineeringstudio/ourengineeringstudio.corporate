@@ -61,6 +61,14 @@ const ja = {
   'term.section6Title': '6. 準拠法と管轄',
   'term.section6Body': '本規約は日本の法律に準拠します。紛争が生じた場合は、日本の裁判所が専属的管轄権を有します。',
 
+  // Waitlist
+  'waitlist.comingSoon': 'Coming Soon',
+  'waitlist.emailPlaceholder': 'メールアドレスを入力',
+  'waitlist.submit': 'ウェイトリストに登録',
+  'waitlist.success': '登録しました！リリース時にお知らせします。',
+  'waitlist.alreadyRegistered': 'このメールアドレスは登録済みです。',
+  'waitlist.error': '登録に失敗しました。もう一度お試しください。',
+
   // Common
   'common.home': 'ホーム',
 };

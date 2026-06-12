@@ -61,6 +61,14 @@ const en = {
   'term.section6Title': '6. Governing Law and Jurisdiction',
   'term.section6Body': 'These terms are governed by the laws of Japan. Any disputes shall be subject to the exclusive jurisdiction of the courts of Japan.',
 
+  // Waitlist
+  'waitlist.comingSoon': 'Coming Soon',
+  'waitlist.emailPlaceholder': 'Enter your email',
+  'waitlist.submit': 'Join Waitlist',
+  'waitlist.success': "You're on the list! We'll notify you at launch.",
+  'waitlist.alreadyRegistered': 'This email is already registered.',
+  'waitlist.error': 'Something went wrong. Please try again.',
+
   // Common
   'common.home': 'HOME',
 };

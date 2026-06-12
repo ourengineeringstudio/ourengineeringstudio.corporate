@@ -20,6 +20,22 @@ function Home() {
             {apps.map((app) => {
               const iconPath = require(`../assets/images/appIcons/${app.icon}`);
 
+              if (app.status === 'coming-soon') {
+                return (
+                  <Link
+                    key={app.id}
+                    to={`/${app.id}`}
+                    className="app-icon-item"
+                  >
+                    <img
+                      src={iconPath}
+                      alt={app.name}
+                      className="app-icon"
+                    />
+                  </Link>
+                );
+              }
+
               // URLが言語別オブジェクトの場合は現在の言語で解決、文字列ならそのまま使用
               const resolve = (url) =>
                 typeof url === 'object' && url !== null ? (url[language] || url.en || '') : (url || '');

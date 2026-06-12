@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Support from './pages/Support';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Term from './pages/Term';
+import AppWaitlist from './pages/AppWaitlist';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/support" element={<Support />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/term" element={<Term />} />
+          <Route path="/:appId" element={<AppWaitlist />} />
         </Routes>
       </Router>
     </LanguageProvider>
