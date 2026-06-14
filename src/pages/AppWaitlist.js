@@ -50,9 +50,19 @@ function AppWaitlist() {
     <div className="App">
       <Header />
       <div className="waitlist-content">
-        <img src={iconPath} alt={app.name} className="waitlist-icon" />
-        <h1 className="waitlist-app-name">{app.name}</h1>
-        <span className="waitlist-badge">{t('waitlist.comingSoon')}</span>
+        <div className="waitlist-header">
+          <img src={iconPath} alt={app.name} className="waitlist-icon" />
+          <h1 className="waitlist-app-name">{app.name}</h1>
+        </div>
+        {app.screenshot && (
+          <div className="waitlist-screenshot">
+            <img
+              src={require(`../assets/images/screenshots/${resolve(app.screenshot)}`)}
+              alt={`${app.name} screenshot`}
+              className="waitlist-screenshot-img"
+            />
+          </div>
+        )}
 
         {app.description && (
           <p className="waitlist-description">{resolve(app.description)}</p>
@@ -62,22 +72,24 @@ function AppWaitlist() {
           <p className="waitlist-message waitlist-success">{t('waitlist.success')}</p>
         ) : (
           <form className="waitlist-form" onSubmit={handleSubmit}>
-            <input
-              type="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder={t('waitlist.emailPlaceholder')}
-              className="waitlist-input"
-              disabled={status === 'submitting'}
-            />
-            <button
-              type="submit"
-              className="waitlist-button"
-              disabled={status === 'submitting'}
-            >
-              {t('waitlist.submit')}
-            </button>
+            <div className="waitlist-input-group">
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder={t('waitlist.emailPlaceholder')}
+                className="waitlist-input"
+                disabled={status === 'submitting'}
+              />
+              <button
+                type="submit"
+                className={`waitlist-button ${language === 'ja' ? 'waitlist-button-ja' : ''}`}
+                disabled={status === 'submitting'}
+              >
+                {t('waitlist.submit')}
+              </button>
+            </div>
             {status === 'already' && (
               <p className="waitlist-message waitlist-already">{t('waitlist.alreadyRegistered')}</p>
             )}

@@ -1,5 +1,5 @@
 // アプリ情報の設定ファイル
-// 新しいアプリを追加する場合は、このファイルに追加してください
+// 新しいアプリを追加する場合は、配列の末尾に追加してください（末尾が上段に表示されます）
 
 const apps = [
   {
@@ -38,16 +38,19 @@ const apps = [
     playStoreUrl: '',
     webUrl: 'https://nomuman.github.io/daily-shingon/', // Webアプリ/サービスのURL
   },
-  // テスト用 coming-soon アプリ（動作確認後に削除 or 差し替え）
   {
-    id: 'testapp',
-    name: 'Test App',
-    icon: 'coffeehouse.png', // 仮アイコン
+    id: 'asagao',
+    name: 'Asagao',
+    icon: 'asagao.png',
     platform: 'ios',
     status: 'coming-soon',
     description: {
-      ja: 'これはテスト用のアプリです。',
-      en: 'This is a test app.',
+      ja: 'うるさいアラームに頼らず\n自分で起きる早起きアプリ',
+      en: 'Wake up on your own\nwithout noisy alarms',
+    },
+    screenshot: {
+      ja: 'asagao_screenshot.png',
+      en: 'asagao_screenshot.png',
     },
     appStoreUrl: '',
     playStoreUrl: '',
