@@ -66,6 +66,9 @@ const ja = {
   'waitlist.emailPlaceholder': 'メールアドレスを入力',
   'waitlist.submit': 'ウェイトリストに登録',
   'waitlist.success': '登録しました！リリース時にお知らせします。',
+  'waitlist.successTitle': '登録が完了しました！',
+  'waitlist.successBody': 'アプリの準備ができ次第、お知らせします。お楽しみに！',
+  'waitlist.backHome': 'ホームへ戻る',
   'waitlist.alreadyRegistered': 'このメールアドレスは登録済みです。',
   'waitlist.error': '登録に失敗しました。もう一度お試しください。',
 

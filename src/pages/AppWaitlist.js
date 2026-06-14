@@ -50,53 +50,61 @@ function AppWaitlist() {
     <div className="App">
       <Header />
       <div className="waitlist-content">
-        <div className="waitlist-header">
-          <img src={iconPath} alt={app.name} className="waitlist-icon" />
-          <h1 className="waitlist-app-name">{app.name}</h1>
-        </div>
-        {app.screenshot && (
-          <div className="waitlist-screenshot">
-            <img
-              src={require(`../assets/images/screenshots/${resolve(app.screenshot)}`)}
-              alt={`${app.name} screenshot`}
-              className="waitlist-screenshot-img"
-            />
-          </div>
-        )}
-
-        {app.description && (
-          <p className="waitlist-description">{resolve(app.description)}</p>
-        )}
-
         {status === 'success' ? (
-          <p className="waitlist-message waitlist-success">{t('waitlist.success')}</p>
-        ) : (
-          <form className="waitlist-form" onSubmit={handleSubmit}>
-            <div className="waitlist-input-group">
-              <input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder={t('waitlist.emailPlaceholder')}
-                className="waitlist-input"
-                disabled={status === 'submitting'}
-              />
-              <button
-                type="submit"
-                className={`waitlist-button ${language === 'ja' ? 'waitlist-button-ja' : ''}`}
-                disabled={status === 'submitting'}
-              >
-                {t('waitlist.submit')}
-              </button>
+          <div className="waitlist-success-content">
+            <div className="waitlist-header">
+              <img src={iconPath} alt={app.name} className="waitlist-icon" />
+              <h1 className="waitlist-app-name">{app.name}</h1>
             </div>
-            {status === 'already' && (
-              <p className="waitlist-message waitlist-already">{t('waitlist.alreadyRegistered')}</p>
+            <p className="waitlist-success-title">{t('waitlist.successTitle')}</p>
+            <p className="waitlist-success-body">{t('waitlist.successBody')}</p>
+            <Link to="/" className="waitlist-home-button">{t('waitlist.backHome')}</Link>
+          </div>
+        ) : (
+          <>
+            <div className="waitlist-header">
+              <img src={iconPath} alt={app.name} className="waitlist-icon" />
+              <h1 className="waitlist-app-name">{app.name}</h1>
+            </div>
+            {app.screenshot && (
+              <div className="waitlist-screenshot">
+                <img
+                  src={require(`../assets/images/screenshots/${resolve(app.screenshot)}`)}
+                  alt={`${app.name} screenshot`}
+                  className="waitlist-screenshot-img"
+                />
+              </div>
             )}
-            {status === 'error' && (
-              <p className="waitlist-message waitlist-error">{t('waitlist.error')}</p>
+            {app.description && (
+              <p className="waitlist-description">{resolve(app.description)}</p>
             )}
-          </form>
+            <form className="waitlist-form" onSubmit={handleSubmit}>
+              <div className="waitlist-input-group">
+                <input
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder={t('waitlist.emailPlaceholder')}
+                  className="waitlist-input"
+                  disabled={status === 'submitting'}
+                />
+                <button
+                  type="submit"
+                  className={`waitlist-button ${language === 'ja' ? 'waitlist-button-ja' : ''}`}
+                  disabled={status === 'submitting'}
+                >
+                  {t('waitlist.submit')}
+                </button>
+              </div>
+              {status === 'already' && (
+                <p className="waitlist-message waitlist-already">{t('waitlist.alreadyRegistered')}</p>
+              )}
+              {status === 'error' && (
+                <p className="waitlist-message waitlist-error">{t('waitlist.error')}</p>
+              )}
+            </form>
+          </>
         )}
       </div>
 

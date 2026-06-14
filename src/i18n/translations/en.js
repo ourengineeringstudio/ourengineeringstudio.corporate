@@ -66,6 +66,9 @@ const en = {
   'waitlist.emailPlaceholder': 'Enter your email',
   'waitlist.submit': 'Join Waitlist',
   'waitlist.success': "You're on the list! We'll notify you at launch.",
+  'waitlist.successTitle': "You're on the list!",
+  'waitlist.successBody': "We'll let you know when the app is ready. Stay tuned!",
+  'waitlist.backHome': 'Back to Home',
   'waitlist.alreadyRegistered': 'This email is already registered.',
   'waitlist.error': 'Something went wrong. Please try again.',
 
